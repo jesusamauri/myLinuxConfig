@@ -1,5 +1,5 @@
 # myLinuxConfig
-files that will allow me to feel like home(you can use it as a base start for your home)
+Files that will allow me to feel like home(you can use it as a base start for your home)
 
 This is collection of my configuration files and support files that help me to go throug
 my every day, giving a hand when i got short from memory and i dont remember which program 
