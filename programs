@@ -1,0 +1,12 @@
+program-Drescripcion
+arj
+gdebi	instalar paquetes .deb, y de otros tipos de manera automatica
+lha
+mpack
+p7zip	realizar zip, 7zip
+p7zip-rar comprimir en rar
+shareutils
+w3m 	command line web browser,
+	sudo apt install ubuntu-restricted-extras, software privativo.
+	sudo apt-get isntall flashplugin-installer,instalar el flash
+ 	http://blog.desdelinux.net/despues-instalar-ubuntu-14-10-utopic-unicorn/	

@@ -1,0 +1,105 @@
+comannd-Descripcion 
+
+xrandr	manejar las pantallas, hdmi, vga inputs, configuracion. xrandr --output LVDS2 --mode 1024x768
+sshfs 	montar filesystems de un terminal remoto de manera local, con ssh  https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh  
+blkid 	mostrar uuid de particiones asi como su nombre lugar donde se encuentra "dev/sda1"
+ssh 		conectarte a un terminal remoto, ssh <user>@xxx.xxx.xxx.xxx:port, ssh -X () para el envio de X windows.
+du -h	mostrar el tamaño de las carpetas o "archivos" dudas...
+uname -m mostrar la arquitectura de kernel que se esta corriendo.
+top 	mostrar en terminal un system manager con los procesos mas importantes del sistema.
+jobs	mostrar cuales son los procesos en background que estan pausados o corriendo en el terminal
+fg	reanudar un proceso, con %n, abrira en conjunto con la lista de jobs, el numero de proceso pausado o en background que deses traer al frente, restart.
+lsof	mostrar archivos abiertos 
+free 	mostrar la cantidad de ram y swap que se esta utilizando
+cat 	mostrar el contenido de un archivo," cat file.txt ", overwrinting "cat x.txt > y.txt",at the end "cat x.txt >> y.txt" 
+dd	crear liveusb, se eliminara todo el contenido del usb " dd if=/home/ja/Descargas/ubuntu-gnome-14.10-desktop-amd64.iso of=/dev/sdN bs=8M conv=fsync " 		
+fdisk	conocer las unidades que se encuentran montadas en el sistema, util para conocer el /dev/sdN " sudo fdisk -l "
+grep 	buscar desde archivo, echo, cat | (..), grep "string" file, case sensitive -i, exact same string -w, recursively -r " -r "string" * ", busca todo lo que no contenga "string" -v. http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/
+locate	buscar en formas diferentes...
+apropos
+find 	http://www.codecoffee.com/tipsforlinux/articles/21.html, https://www.digitalocean.com/community/tutorials/how-to-use-find-and-locate-to-search-for-files-on-a-linux-vps
+			-iname "query", -name "quer*", -type (f= file, d = directory, l = symbolic link) query, [dir] -size +/-/(k=kilobytes, M=megabytes,G=Gigas) i.e ~/ -size -10k, -maxdepth/mindepth num -name query, 
+du	encontrar cual es el espacio utilizado por carpeta.
+ls 	mostrar el contenido de una carpeta cuenta con varias opciones, -a=show hidden files, -d=list directories, -p filetype, -R=recursively, -t=by modification time
+mount	montar discos desde terminal, " sudo mount -t auto -v /dev/sdN /media/ja/home " -t auto=decide el tipo de fylesystem del disco, -v=is for verbosity.
+gunzip	gzip file, gunzip file.gz para descomprimir, tar -xzf file.tar.gz
+bz2	bzip2 file, bunzip2 file.bz2, tar xfvj file.tar.bz2
+zip	file.zip file1 file2, zip -r (recursively throug dirs). unzip file.zip -d dir(puedes poner un escritorio nuevo como direccion).
+tar	extraer tar files, " tar cvf file.tar dirname/" -c=create, -f=following is the archive file name, extract "tar xvf name.tar", "://www.thomas-krenn.com/de/wiki/Archive_unter_Linux_(tar,_gz,_bz2,_zip),tar xjvf" descomprimir .tar.bz2
+xz	comprimir files de tipo tar, xz foo.tar, xz --list foo.xz, 
+umount	desmontar disco, "sudo umont /deb/sdN"
+apt 	1)update and 2)upgrade, actualizar y verificar si se necesitar hacer algun upgrade basico para sistemas nuevos, o despues de agregar un ppa
+whereis	encontrar un programa instalado en tu sistema operativo
+mkdir	crear un directorio 
+mv	mover archivos, "mv myfile.txt destination-directory", "mv x.txt ../" move to a parent directory, "mv /home/x.{txt,xml} elimina txt y lo crea con xml
+cp 	copiar un archivo, "cp x.txt x1.txt", "cp x.txt{,-old}", crea un archivo que ahora se llama x.txt-old.
+rm 	eliminar archivos no carpetas, -r recursivamente y tambien permite remover carpetas "rm -rf mydirectory"
+rmkdir	elimina carpetas
+pidof	muestrar el codigo de ejecucion de un programa"pidof firefox" = 3345,+ "kill 3345" termina el proceso de firefox, UNIX system
+killall	terminar un procreso"Killall firefox", termina el proceso de firefox, LINUX system
+history muestra tu historial, en conjunto con grep es mejor "history | grep nano", con los numeros de lista puedes correr el comando "!455"
+link 	crear un hardlink a un archivo," link file1.txt file2.txt"
+ln -s  	crear un softlink a un archivo,"ln -s public_html/myfile1.txt"
+dmesg	mostrar los kernel ring buffers, con opciones como grep podemos encontrar errores en el hardware. y encontrar el archivo almacenado en, "cat /var/log/kern.log".
+lspci 	identificar todos los dispositivos de hardware que se encuentre conectados a la interconexion de componentes perifericos, http://www.linuxnix.com/2013/05/find-hardware-details-using-lspci-command-in-linux.html
+dmidecode obtener informacion del hardware, firmware, BIOS, "-t type" 
+type= 1 System, 2Cache, 4processor, 9System slost, 10Onboard devices, 17 Physical memory, 25Power controls, 34Managment device, 32System boot(no errors detected.
+lshw	Mostrar informacion basica sobre el hardware de la computadora, cpu, memory,pci,display,usb,network.
+lsusb 	mostrar informacion sobre los dispositivos usb conectados
+df -h 	mostrar filesystems montados en la computadora.
+mount 	mount -o loop x.iso /mnt mounting iso
+>	enviar la salida de un comando a un archivo, "ls -a > file" standar oput=1 standar error=2,"ls -a > f 2>$1
+ps 	mostrar los processos que se estan corriendo
+&	enviar un proceso creado en terminal al background, "firefox &",ocultar,seguir usando la terminal
+tcpdump Iniciar el modo promiscuo para revisar todos los paquetes que pasan 
+
+tips and tricks
+ctrl+U limpiar toda la linea de comando
+ctrl+W eliminar desde la posicion del cursor hasta el fin de la linea
+ctrl+W eliminar la palabra antes del cursor
+ctrl+R buscar en tu historial, ctrl+R nano
+ctrl+c terminar cualquier programa iniciado en terminal
+cd ../ cambiar de directorio hijo, dentro del mismo directorio padre, estas en  /home/Descargas y vas a /home/Documentos, "cd ../Documentos".
+cd -   regresar al directorio anterior
+!!     utilizar la ultima linea de comando escrita
+!      "!cat" ejecutar el ultimo comando que utilizo cat, "icat:P"muestra el ultimo comando que utilizo cat y lo agrega al final de tu historial por lo que luego podras usar "!!" 
+!$     sustituir el argumento del ultimo comando 
+*	Usar como "wildcard=comodin", echo D* = Descargas Documentos Datos...,.
+^^     sustituir una palabra en el ultimo comando y ejecutarlo "^napo^nano" sustituye nano por napo en la ultima linea de comando
+.bashrc archivo en donde puedes agregar tus alias alias ls='ls -a', el archivo para todo el systema esta en /etc/bash.bashrc
+cdl    fuction cld() { /bin/cd "$1" && /bin/ls; }
+       en la carpeta /etc/fstab encontrar informacion sobre discos del sistema asi como tambien la contraseña del usuario.
+	
+
+Programas para instalar
+chronium-	sudo apt-get install chromium-browser
+spotify	- 	echo"deb http://repository.spotify.com stable non-free">>/etc/apt/sources.list, sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59, update, sudo apt-get install spotify-client.
+grive   -	http://www.lbreda.com/grive/installation#updates
+synapse-	sudo apt-add-repository ppa:synapse-core/testing, update, sudo apt-get install synapse.
+playonlinux or wine
+github		sudo apt-get install git, git -cofig --global user.name "mektor", git -config --global user.mail "@gmail.com"
+Vmvirtualbox	https://www.virtualbox.org/wiki/
+System information sudo apt-get install hardinfo
+Linux_Downloads,	 
+gdebi	
+gnome libraries	sudo apt-get install libgnome2
+android_studio	descargarlo desde la pagina, https://developer.android.com/sdk/index.html, necesita java jdk http://www.oracle.com/technetwork/java/javase/downloads/index.html.
+java		download jdk, tar -xzf file.tar.gz, cp file /usr/lib/jvm, update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-8/bin/java 1, update-alternatives --config java.
+Rufus 		crear un usbstick for windows
+
+puedes agregar a /etc/fstab las particiones que tengas siguiendo los requisitos, de tal manera que se monten con "mount /media/ja/home"
+vim tutorial http://www.yolinux.com/TUTORIALS/LinuxTutorialAdvanced_vi.html
+vim IDE		http://haridas.in/vim-as-your-ide.html		
+vim compile	https://github.com/vishap/vim_scripts/blob/master/plugin/cf5-compile.vim
+vim IDE/alter 	http://www.neuraladvance.com/vim-as-an-ide-for-python-and-c.html
+puedes agregar soporte a algun programa o librerias, en /etc/apt/sources.list 
+change default browser sudo update-alternatives --config x-www-browser
+change swappiness to prevent from using the hard drive, "sudo vim /etc/sysctl.conf" and add vm.swappiness = 1
+permitir a otros usuarios apagar el equipo," sudo chmod u+s /sbin/shutdown", http://linux.byexamples.com/archives/315/how-to-shutdown-and-reboot-without-sudo-password/
+grep -r /dir, /dir2 : buscar dentro de archivos dentro del directorio.
+escribir la fecha(date) en el nombre de un archivo. $(date +%d-%m-%y").
+github https://help.github.com/articles/generating-ssh-keys/ for ssh-key creation, https://www.linux.com/learn/tutorials/796387-beginning-git-and-github-for-linux-users/ para empezar a usar github.
+devilspie, manipular ventanas mediante un script, http://www.webupd8.org/2011/02/how-to-start-applications-minimized.html y http://linux.die.net/man/1/devilspie, fading, opacity,minimize,close, resize
+wmctrl hacer una pantalla fullscreen and above or below, wmctrl -r "Chromium" -T "gmail" para renombrar una ventana de chromium como gmail
+vim 	convertir vim en un iDE, http://xmodulo.com/turn-vim-full-fledged-ide.html
+github 	nuevo repositorio creado desde la maquina locar http://thelucid.com/2008/12/02/git-setting-up-a-remote-repository-and-doing-an-initial-push/
