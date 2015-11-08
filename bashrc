@@ -1,10 +1,20 @@
 ###################################
 ###comandos de ayuda 
 ###################################
+alias upgrade="sudo apt-get upgrade"
+alias install="sudo apt-get install"
 alias cmd="vim ~/myLinuxConfig/comandos"
 alias fvim="vim ~/myLinuxConfig/vimcommands" 
 bc(){
 	cat ~/myLinuxConfig/comandos | grep $1
+}
+alias l="ls -l"
+cpp(){ 
+	g++ $1 -g -Wall -ansi -o main 
+}
+cdl(){ 
+	cd "$1" 
+	ls --color=auto 
 }
 
 ###################################
@@ -17,16 +27,6 @@ alias update="sudo apt-get update"
 alias tec="cd /media/home/drive/tec/6semestre/"
 alias gdrive="cd /media/home/drive"
 alias github="cd /media/home/github"
-alias upgrade="sudo apt-get upgrade"
-alias install="sudo apt-get install"
-alias l="ls -l"
-cpp(){ 
-	g++ $1 -g -Wall -ansi -o main 
-}
-cdl(){ 
-	cd "$1" 
-	ls --color=auto 
-}
 ###################################
 #export paths for aplicattions
 ###################################
@@ -36,8 +36,6 @@ export PATH=$PATH:$GOPATH:$GOPATH/bin
 export PATH=$PATH:/usr/lib/jvm/jdk-8-60/bin
 export JAVA_HOME=/usr/lib/jvm/jdk-8-60/bin/java
 export PATH="$PATH:"/opt/microchip/xc32/v1.40/bin""
-#export PATH=$PATH:/media/home/respaldo/genymotion/genymotion
-#export PATH=$PATH:/usr/local/go/bin
 
 #######################
 #montar un particion de tu disco duro // si modificas el /etc/fstab puedes realizarlo permanentemente
