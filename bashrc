@@ -1,16 +1,16 @@
+###################################
 ###comandos de ayuda 
-######################
-alias cmd="vim /media/home/drive/lhelp/comandos"
-alias fvim="vim /home/ja/.vim/vimcommands" 
-alias pil="ssh pi@192.168.0.2" 
-alias pii="ssh pi@189.219.65.178"
+###################################
+alias cmd="vim ~/myLinuxConfig/comandos"
+alias fvim="vim ~/myLinuxConfig/vimcommands" 
 bc(){
-	cat /media/home/drive/lhelp/comandos | grep $1
+	cat ~/myLinuxConfig/comandos | grep $1
 }
-#######################
 
-#short commands
-#######################
+###################################
+#Your personal commands commands
+###################################
+LS_COLORS="di=0;55" ; export LS_COLORS
 alias track="hamster-time-tracker &"
 alias push="pushd $(pwd)"
 alias update="sudo apt-get update"
@@ -27,28 +27,29 @@ cdl(){
 	cd "$1" 
 	ls --color=auto 
 }
-#######################
+###################################
 #export paths for aplicattions
-#######################
+###################################
 export PATH=$PATH:/home/ja/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH:$GOPATH/bin
 export PATH=$PATH:/usr/lib/jvm/jdk-8-60/bin
 export JAVA_HOME=/usr/lib/jvm/jdk-8-60/bin/java
+export PATH="$PATH:"/opt/microchip/xc32/v1.40/bin""
 #export PATH=$PATH:/media/home/respaldo/genymotion/genymotion
 #export PATH=$PATH:/usr/local/go/bin
-LS_COLORS="di=0;55" ; export LS_COLORS
+
 #######################
-#montar el home // si modificas el /etc/fstab puedes realizarlo permanentemente
+#montar un particion de tu disco duro // si modificas el /etc/fstab puedes realizarlo permanentemente
 #######################
+#input i.e "mount myPartionName sda5", encuentra tu sdaN con sudo fdisk -l 
 mount(){
-	sudo mkdir -p -v /media/ja/$1
+	sudo mkdir -p -v /media/$1
 	case $1 in 
-	home ) 
-		sudo mount -t auto -v /dev/sda5 /media/ja/$1
+		myPartionName ) 
+			sudo mount -t auto -v /dev/$2 /media/$1
 	;;
 	esac
 }
 #######################
 
-export PATH="$PATH:"/opt/microchip/xc32/v1.40/bin""
