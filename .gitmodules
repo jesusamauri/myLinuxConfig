@@ -22,3 +22,6 @@
 [submodule "vimconf/bundle/vim-kalisi"]
 	path = vimconf/bundle/vim-kalisi
 	url = https://github.com/freeo/vim-kalisi
+[submodule "vimconf/bundle/nerdtree"]
+	path = vimconf/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
