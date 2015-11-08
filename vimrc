@@ -6,7 +6,8 @@ syntax on
 filetype plugin indent on
 setl number
 filetype on
-colorscheme colorer 
+set background=dark
+colorscheme kalisi
 set tabstop=2
 set shiftwidth=2
 

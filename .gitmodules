@@ -1,0 +1,24 @@
+[submodule "vimconf/bundle/supertab"]
+	path = vimconf/bundle/supertab
+	url = https://github.com/ervandew/supertab
+[submodule "vimconf/bundle/syntastic"]
+	path = vimconf/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic
+[submodule "vimconf/bundle/auto-pairs"]
+	path = vimconf/bundle/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
+[submodule "vimconf/bundle/nerdcommenter"]
+	path = vimconf/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter
+[submodule "vimconf/bundle/conqueterm-vim"]
+	path = vimconf/bundle/conqueterm-vim
+	url = https://github.com/pthrasher/conqueterm-vim
+[submodule "vimconf/bundle/Buffergator"]
+	path = vimconf/bundle/Buffergator
+	url = https://github.com/vim-scripts/Buffergator
+[submodule "vimconf/bundle/vim-buffergator"]
+	path = vimconf/bundle/vim-buffergator
+	url = https://github.com/jeetsukumaran/vim-buffergator
+[submodule "vimconf/bundle/vim-kalisi"]
+	path = vimconf/bundle/vim-kalisi
+	url = https://github.com/freeo/vim-kalisi
