@@ -7,7 +7,7 @@ filetype plugin indent on
 setl number
 filetype on
 set background=dark
-colorscheme kalisi
+colorscheme darkblue
 set tabstop=2
 set shiftwidth=2
 

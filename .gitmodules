@@ -25,3 +25,6 @@
 [submodule "vimconf/bundle/nerdtree"]
 	path = vimconf/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree
+[submodule "vimconf/bundle/vim-multiple-cursors"]
+	path = vimconf/bundle/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors
